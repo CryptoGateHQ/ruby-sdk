@@ -8,7 +8,7 @@
         "generatorName": "ruby",
         "inputSpec": "openapi.yaml",
         "output": ".",
-        "additionalProperties": { "gemName": "cryptogate", "moduleName": "CryptoGate", "gemVersion": "0.1.0" }
+        "additionalProperties": { "gemName": "griffnode", "moduleName": "GriffNode", "gemVersion": "0.1.0" }
       }
     }
   }
