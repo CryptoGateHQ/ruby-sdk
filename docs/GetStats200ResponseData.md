@@ -1,4 +1,4 @@
-# CryptoGate::GetStats200ResponseData
+# GriffNode::GetStats200ResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::GetStats200ResponseData.new(
+instance = GriffNode::GetStats200ResponseData.new(
   total_transactions: null,
   monthly_transactions: null,
   total_volume_fiat: null,

@@ -1,4 +1,4 @@
-# CryptoGate::LineItem
+# GriffNode::LineItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::LineItem.new(
+instance = GriffNode::LineItem.new(
   name: null,
   quantity: null,
   price: null

@@ -1,4 +1,4 @@
-# CryptoGate::ListCryptocurrencies200ResponseData
+# GriffNode::ListCryptocurrencies200ResponseData
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::ListCryptocurrencies200ResponseData.new(
+instance = GriffNode::ListCryptocurrencies200ResponseData.new(
   cryptocurrencies: null,
   total: null
 )

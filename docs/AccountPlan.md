@@ -1,4 +1,4 @@
-# CryptoGate::AccountPlan
+# GriffNode::AccountPlan
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::AccountPlan.new(
+instance = GriffNode::AccountPlan.new(
   tier: null,
   billing_cycle: null,
   auto_renewal: null,

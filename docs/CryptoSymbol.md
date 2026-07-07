@@ -1,4 +1,4 @@
-# CryptoGate::CryptoSymbol
+# GriffNode::CryptoSymbol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::CryptoSymbol.new()
+instance = GriffNode::CryptoSymbol.new()
 ```
 

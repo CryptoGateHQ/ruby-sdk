@@ -1,6 +1,6 @@
-# CryptoGate::BillingApi
+# GriffNode::BillingApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -17,21 +17,21 @@ Start a plan upgrade or account top-up
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::BillingApi.new
-create_billing_checkout_request = CryptoGate::CreateBillingCheckoutRequest.new({tier: CryptoGate::PlanTier::STARTER}) # CreateBillingCheckoutRequest | 
+api_instance = GriffNode::BillingApi.new
+create_billing_checkout_request = GriffNode::CreateBillingCheckoutRequest.new({tier: GriffNode::PlanTier::STARTER}) # CreateBillingCheckoutRequest | 
 
 begin
   # Start a plan upgrade or account top-up
   result = api_instance.create_billing_checkout(create_billing_checkout_request)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling BillingApi->create_billing_checkout: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionEnvelope>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling BillingApi->create_billing_checkout_with_http_info: #{e}"
 end
 ```

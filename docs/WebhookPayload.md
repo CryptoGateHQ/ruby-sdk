@@ -1,4 +1,4 @@
-# CryptoGate::WebhookPayload
+# GriffNode::WebhookPayload
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::WebhookPayload.new(
+instance = GriffNode::WebhookPayload.new(
   event: null,
   timestamp: null,
   transaction_id: null,

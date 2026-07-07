@@ -1,4 +1,4 @@
-# CryptoGate::InlineObject
+# GriffNode::InlineObject
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::InlineObject.new(
+instance = GriffNode::InlineObject.new(
   success: null,
   error: null,
   message: null,

@@ -1,4 +1,4 @@
-# CryptoGate::TransactionStatus
+# GriffNode::TransactionStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::TransactionStatus.new()
+instance = GriffNode::TransactionStatus.new()
 ```
 

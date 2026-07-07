@@ -1,4 +1,4 @@
-# CryptoGate::AccountUsage
+# GriffNode::AccountUsage
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::AccountUsage.new(
+instance = GriffNode::AccountUsage.new(
   monthly_transactions_used: null,
   monthly_transaction_limit: null,
   overage_cost_per_tx: null

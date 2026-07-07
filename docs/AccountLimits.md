@@ -1,4 +1,4 @@
-# CryptoGate::AccountLimits
+# GriffNode::AccountLimits
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::AccountLimits.new(
+instance = GriffNode::AccountLimits.new(
   api_rate_limit_per_minute: null,
   api_rate_limit_per_hour: null,
   webhook_support: null

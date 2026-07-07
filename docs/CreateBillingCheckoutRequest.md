@@ -1,4 +1,4 @@
-# CryptoGate::CreateBillingCheckoutRequest
+# GriffNode::CreateBillingCheckoutRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::CreateBillingCheckoutRequest.new(
+instance = GriffNode::CreateBillingCheckoutRequest.new(
   tier: null,
   billing_months: null,
   payment_method: null

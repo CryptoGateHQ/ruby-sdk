@@ -1,13 +1,13 @@
-# CryptoGate::AccountApi
+# GriffNode::AccountApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**get_account**](AccountApi.md#get_account) | **GET** /account | Merchant plan, usage and limits |
 | [**get_stats**](AccountApi.md#get_stats) | **GET** /stats | Merchant transaction analytics |
 | [**list_balances**](AccountApi.md#list_balances) | **GET** /balances | On-platform balances (for overage/top-up; NOT crypto settlement) |
-| [**list_invoices**](AccountApi.md#list_invoices) | **GET** /invoices | CryptoGate billing invoices (platform ↔ merchant) |
+| [**list_invoices**](AccountApi.md#list_invoices) | **GET** /invoices | GriffNode billing invoices (platform ↔ merchant) |
 | [**list_plans**](AccountApi.md#list_plans) | **GET** /plans | Plan catalogue and pricing |
 
 
@@ -21,20 +21,20 @@ Merchant plan, usage and limits
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::AccountApi.new
+api_instance = GriffNode::AccountApi.new
 
 begin
   # Merchant plan, usage and limits
   result = api_instance.get_account
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->get_account: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAccount200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->get_account_with_http_info: #{e}"
 end
 ```
@@ -85,20 +85,20 @@ Merchant transaction analytics
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::AccountApi.new
+api_instance = GriffNode::AccountApi.new
 
 begin
   # Merchant transaction analytics
   result = api_instance.get_stats
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->get_stats: #{e}"
 end
 ```
@@ -116,7 +116,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStats200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->get_stats_with_http_info: #{e}"
 end
 ```
@@ -149,20 +149,20 @@ On-platform balances (for overage/top-up; NOT crypto settlement)
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::AccountApi.new
+api_instance = GriffNode::AccountApi.new
 
 begin
   # On-platform balances (for overage/top-up; NOT crypto settlement)
   result = api_instance.list_balances
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_balances: #{e}"
 end
 ```
@@ -180,7 +180,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListBalances200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_balances_with_http_info: #{e}"
 end
 ```
@@ -207,30 +207,30 @@ This endpoint does not need any parameter.
 
 > <ListInvoices200Response> list_invoices(opts)
 
-CryptoGate billing invoices (platform ↔ merchant)
+GriffNode billing invoices (platform ↔ merchant)
 
 ### Examples
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::AccountApi.new
+api_instance = GriffNode::AccountApi.new
 opts = {
   limit: 56, # Integer | 
   offset: 56 # Integer | 
 }
 
 begin
-  # CryptoGate billing invoices (platform ↔ merchant)
+  # GriffNode billing invoices (platform ↔ merchant)
   result = api_instance.list_invoices(opts)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_invoices: #{e}"
 end
 ```
@@ -243,12 +243,12 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # CryptoGate billing invoices (platform ↔ merchant)
+  # GriffNode billing invoices (platform ↔ merchant)
   data, status_code, headers = api_instance.list_invoices_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListInvoices200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_invoices_with_http_info: #{e}"
 end
 ```
@@ -284,20 +284,20 @@ Plan catalogue and pricing
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::AccountApi.new
+api_instance = GriffNode::AccountApi.new
 
 begin
   # Plan catalogue and pricing
   result = api_instance.list_plans
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_plans: #{e}"
 end
 ```
@@ -315,7 +315,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListPlans200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling AccountApi->list_plans_with_http_info: #{e}"
 end
 ```

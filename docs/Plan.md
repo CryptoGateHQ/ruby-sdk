@@ -1,4 +1,4 @@
-# CryptoGate::Plan
+# GriffNode::Plan
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Plan.new(
+instance = GriffNode::Plan.new(
   tier: null,
   monthly_price_usd: null,
   yearly_price_usd: null,

@@ -1,4 +1,4 @@
-# CryptoGate::GetHealth200Response
+# GriffNode::GetHealth200Response
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::GetHealth200Response.new(
+instance = GriffNode::GetHealth200Response.new(
   status: null,
   service: null,
   version: null

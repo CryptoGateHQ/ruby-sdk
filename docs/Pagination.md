@@ -1,4 +1,4 @@
-# CryptoGate::Pagination
+# GriffNode::Pagination
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Pagination.new(
+instance = GriffNode::Pagination.new(
   limit: null,
   offset: null,
   total: null

@@ -1,6 +1,6 @@
-# CryptoGate::DefaultApi
+# GriffNode::DefaultApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -13,20 +13,20 @@ All URIs are relative to *https://api.cryptogate.live/v1*
 
 Payment lifecycle event delivered to the merchant's webhook URL
 
-Signed with HMAC-SHA256 over the RAW request body. Verify by comparing `X-CryptoGate-Signature: sha256=<hex>` to `hex(hmac_sha256(webhook_secret, raw_body))` using a constant-time compare. Also sent: `X-CryptoGate-Event` (the event type) and `X-Webhook-ID` (unique delivery id — use for idempotency). 
+Signed with HMAC-SHA256 over the RAW request body. Verify by comparing `X-GriffNode-Signature: sha256=<hex>` to `hex(hmac_sha256(webhook_secret, raw_body))` using a constant-time compare. Also sent: `X-GriffNode-Event` (the event type) and `X-Webhook-ID` (unique delivery id — use for idempotency). 
 
 ### Examples
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::DefaultApi.new
+api_instance = GriffNode::DefaultApi.new
 opts = {
   webhook_payload:  # WebhookPayload | 
 }
@@ -34,7 +34,7 @@ opts = {
 begin
   # Payment lifecycle event delivered to the merchant's webhook URL
   api_instance.payment_webhook(opts)
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling DefaultApi->payment_webhook: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling DefaultApi->payment_webhook_with_http_info: #{e}"
 end
 ```

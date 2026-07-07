@@ -1,4 +1,4 @@
-# CryptoGate::Balance
+# GriffNode::Balance
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Balance.new(
+instance = GriffNode::Balance.new(
   currency: null,
   available_balance: null,
   pending_balance: null,

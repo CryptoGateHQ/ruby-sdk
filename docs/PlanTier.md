@@ -1,4 +1,4 @@
-# CryptoGate::PlanTier
+# GriffNode::PlanTier
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::PlanTier.new()
+instance = GriffNode::PlanTier.new()
 ```
 

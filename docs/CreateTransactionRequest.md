@@ -1,4 +1,4 @@
-# CryptoGate::CreateTransactionRequest
+# GriffNode::CreateTransactionRequest
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::CreateTransactionRequest.new(
+instance = GriffNode::CreateTransactionRequest.new(
   crypto: null,
   amount: null,
   currency_fiat: null,

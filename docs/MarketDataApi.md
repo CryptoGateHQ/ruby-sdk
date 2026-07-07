@@ -1,6 +1,6 @@
-# CryptoGate::MarketDataApi
+# GriffNode::MarketDataApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -19,20 +19,20 @@ Current crypto and fiat exchange rates (USD-denominated)
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::MarketDataApi.new
+api_instance = GriffNode::MarketDataApi.new
 
 begin
   # Current crypto and fiat exchange rates (USD-denominated)
   result = api_instance.get_prices
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->get_prices: #{e}"
 end
 ```
@@ -50,7 +50,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPrices200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->get_prices_with_http_info: #{e}"
 end
 ```
@@ -83,20 +83,20 @@ All supported cryptocurrencies and tokens
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::MarketDataApi.new
+api_instance = GriffNode::MarketDataApi.new
 
 begin
   # All supported cryptocurrencies and tokens
   result = api_instance.list_cryptocurrencies
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->list_cryptocurrencies: #{e}"
 end
 ```
@@ -114,7 +114,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCryptocurrencies200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->list_cryptocurrencies_with_http_info: #{e}"
 end
 ```
@@ -147,20 +147,20 @@ Cryptocurrencies this merchant has wallets configured for
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::MarketDataApi.new
+api_instance = GriffNode::MarketDataApi.new
 
 begin
   # Cryptocurrencies this merchant has wallets configured for
   result = api_instance.list_merchant_cryptocurrencies
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->list_merchant_cryptocurrencies: #{e}"
 end
 ```
@@ -178,7 +178,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCryptocurrencies200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling MarketDataApi->list_merchant_cryptocurrencies_with_http_info: #{e}"
 end
 ```

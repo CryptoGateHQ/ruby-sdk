@@ -1,4 +1,4 @@
-# CryptoGate::FiatCurrency
+# GriffNode::FiatCurrency
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::FiatCurrency.new()
+instance = GriffNode::FiatCurrency.new()
 ```
 

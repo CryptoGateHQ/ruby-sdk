@@ -1,4 +1,4 @@
-# CryptoGate::Invoice
+# GriffNode::Invoice
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Invoice.new(
+instance = GriffNode::Invoice.new(
   transaction_id: null,
   purchase_type: null,
   amount_fiat: null,

@@ -1,4 +1,4 @@
-# CryptoGate::InlineObjectAllOfExistingTransaction
+# GriffNode::InlineObjectAllOfExistingTransaction
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::InlineObjectAllOfExistingTransaction.new(
+instance = GriffNode::InlineObjectAllOfExistingTransaction.new(
   transaction_id: null,
   status: null,
   payment_url: null

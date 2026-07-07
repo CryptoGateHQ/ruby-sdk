@@ -1,4 +1,4 @@
-# CryptoGate::ListPlans200Response
+# GriffNode::ListPlans200Response
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::ListPlans200Response.new(
+instance = GriffNode::ListPlans200Response.new(
   success: null,
   data: null
 )

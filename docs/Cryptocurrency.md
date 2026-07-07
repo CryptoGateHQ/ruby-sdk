@@ -1,4 +1,4 @@
-# CryptoGate::Cryptocurrency
+# GriffNode::Cryptocurrency
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Cryptocurrency.new(
+instance = GriffNode::Cryptocurrency.new(
   symbol: null,
   name: null,
   blockchain: null,

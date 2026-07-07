@@ -1,4 +1,4 @@
-# CryptoGate::TransactionEnvelope
+# GriffNode::TransactionEnvelope
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::TransactionEnvelope.new(
+instance = GriffNode::TransactionEnvelope.new(
   success: null,
   data: null
 )

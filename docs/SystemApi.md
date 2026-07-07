@@ -1,6 +1,6 @@
-# CryptoGate::SystemApi
+# GriffNode::SystemApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -18,15 +18,15 @@ API health check
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 
-api_instance = CryptoGate::SystemApi.new
+api_instance = GriffNode::SystemApi.new
 
 begin
   # API health check
   result = api_instance.get_health
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling SystemApi->get_health: #{e}"
 end
 ```
@@ -44,7 +44,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetHealth200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling SystemApi->get_health_with_http_info: #{e}"
 end
 ```
@@ -79,12 +79,12 @@ Browser-facing redirect to the hosted payment page, authenticated by a **publish
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 
-api_instance = CryptoGate::SystemApi.new
+api_instance = GriffNode::SystemApi.new
 pk = 'pk_example' # String | Publishable key, pk_live_… / pk_test_…
 amount = 'amount_example' # String | Fiat amount (≥ 1.00 USD equivalent).
-crypto = CryptoGate::CryptoSymbol::BTC # CryptoSymbol | 
+crypto = GriffNode::CryptoSymbol::BTC # CryptoSymbol | 
 opts = {
   link: 'link_example' # String | Payment-link slug for attribution.
 }
@@ -92,7 +92,7 @@ opts = {
 begin
   # Hosted-checkout redirect (browser flow, publishable key)
   api_instance.hosted_checkout_redirect(pk, amount, crypto, opts)
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling SystemApi->hosted_checkout_redirect: #{e}"
 end
 ```
@@ -110,7 +110,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling SystemApi->hosted_checkout_redirect_with_http_info: #{e}"
 end
 ```

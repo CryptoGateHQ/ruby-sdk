@@ -1,6 +1,6 @@
-# CryptoGate::TransactionsApi
+# GriffNode::TransactionsApi
 
-All URIs are relative to *https://api.cryptogate.live/v1*
+All URIs are relative to *https://api.griffnode.com/v1*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -20,15 +20,15 @@ Create an itemized transaction (Professional/Enterprise plans)
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::TransactionsApi.new
-create_detailed_transaction_request = CryptoGate::CreateDetailedTransactionRequest.new({crypto: CryptoGate::CryptoSymbol::BTC, items: [CryptoGate::LineItem.new({name: 'name_example', price: 3.56})], order_id: 'order_id_example'}) # CreateDetailedTransactionRequest | 
+api_instance = GriffNode::TransactionsApi.new
+create_detailed_transaction_request = GriffNode::CreateDetailedTransactionRequest.new({crypto: GriffNode::CryptoSymbol::BTC, items: [GriffNode::LineItem.new({name: 'name_example', price: 3.56})], order_id: 'order_id_example'}) # CreateDetailedTransactionRequest | 
 opts = {
   x_idempotency_key: 'x_idempotency_key_example' # String | Optional unique key for a create request (e.g. a UUID). A retried create with the same key returns the original transaction instead of creating a duplicate — send it on every create so a network retry can't double-charge the customer. 
 }
@@ -37,7 +37,7 @@ begin
   # Create an itemized transaction (Professional/Enterprise plans)
   result = api_instance.create_detailed_transaction(create_detailed_transaction_request, opts)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->create_detailed_transaction: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionEnvelope>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->create_detailed_transaction_with_http_info: #{e}"
 end
 ```
@@ -91,15 +91,15 @@ Create a payment transaction
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::TransactionsApi.new
-create_transaction_request = CryptoGate::CreateTransactionRequest.new({crypto: CryptoGate::CryptoSymbol::BTC, amount: 3.56}) # CreateTransactionRequest | 
+api_instance = GriffNode::TransactionsApi.new
+create_transaction_request = GriffNode::CreateTransactionRequest.new({crypto: GriffNode::CryptoSymbol::BTC, amount: 3.56}) # CreateTransactionRequest | 
 opts = {
   x_idempotency_key: 'x_idempotency_key_example' # String | Optional unique key for a create request (e.g. a UUID). A retried create with the same key returns the original transaction instead of creating a duplicate — send it on every create so a network retry can't double-charge the customer. 
 }
@@ -108,7 +108,7 @@ begin
   # Create a payment transaction
   result = api_instance.create_transaction(create_transaction_request, opts)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->create_transaction: #{e}"
 end
 ```
@@ -126,7 +126,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionEnvelope>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->create_transaction_with_http_info: #{e}"
 end
 ```
@@ -162,21 +162,21 @@ Retrieve a single transaction
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::TransactionsApi.new
+api_instance = GriffNode::TransactionsApi.new
 transaction_id = 'transaction_id_example' # String | 
 
 begin
   # Retrieve a single transaction
   result = api_instance.get_transaction(transaction_id)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->get_transaction: #{e}"
 end
 ```
@@ -194,7 +194,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TransactionEnvelope>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->get_transaction_with_http_info: #{e}"
 end
 ```
@@ -229,26 +229,26 @@ List the merchant's transactions (newest first)
 
 ```ruby
 require 'time'
-require 'cryptogate'
+require 'griffnode'
 # setup authorization
-CryptoGate.configure do |config|
+GriffNode.configure do |config|
   # Configure Bearer authorization: SecretKey
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = CryptoGate::TransactionsApi.new
+api_instance = GriffNode::TransactionsApi.new
 opts = {
   limit: 56, # Integer | 
   offset: 56, # Integer | 
-  status: CryptoGate::TransactionStatus::PENDING, # TransactionStatus | 
-  crypto: CryptoGate::CryptoSymbol::BTC # CryptoSymbol | 
+  status: GriffNode::TransactionStatus::PENDING, # TransactionStatus | 
+  crypto: GriffNode::CryptoSymbol::BTC # CryptoSymbol | 
 }
 
 begin
   # List the merchant's transactions (newest first)
   result = api_instance.list_transactions(opts)
   p result
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->list_transactions: #{e}"
 end
 ```
@@ -266,7 +266,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTransactions200Response>
-rescue CryptoGate::ApiError => e
+rescue GriffNode::ApiError => e
   puts "Error when calling TransactionsApi->list_transactions_with_http_info: #{e}"
 end
 ```

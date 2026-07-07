@@ -1,4 +1,4 @@
-# CryptoGate::Error
+# GriffNode::Error
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'cryptogate'
+require 'griffnode'
 
-instance = CryptoGate::Error.new(
+instance = GriffNode::Error.new(
   success: null,
   error: null,
   message: null
