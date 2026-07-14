@@ -19,11 +19,11 @@ Gem::Specification.new do |s|
   s.name        = "griffnode"
   s.version     = GriffNode::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["OpenAPI-Generator"]
-  s.email       = [""]
-  s.homepage    = "https://openapi-generator.tech"
+  s.authors     = ["GriffNode"]
+  s.email       = ["dev@griffnode.com"]
+  s.homepage    = "https://griffnode.com"
   s.summary     = "GriffNode API Ruby Gem"
-  s.description = "Accept Bitcoin, Litecoin, Dogecoin, Dash, Ethereum and ERC-20 tokens. Server-to-server, authenticated with a secret API key (`Authorization: Bearer sk_live_…` for live, or `sk_test_…` for test mode — same base URL). All monetary amounts in API responses are JSON numbers; **webhook** amounts are strings to preserve decimal precision (see the `webhooks` section).  **Rate limits.** Every request is rate-limited per API key in two windows — per minute and per hour — by plan tier (min/hour): starter 30/500, business 100/2000, professional 300/5000, enterprise 1000/20000. Every response carries `X-RateLimit-Limit`, `X-RateLimit-Remaining` and `X-RateLimit-Reset` (Unix seconds) for the per-minute window. On `429` the body is `error: \"RATE_LIMIT_EXCEEDED\"` (either window) with a `Retry-After` header (seconds) — clients should retry after it. A separate `429` with `error: \"MONTHLY_LIMIT_REACHED\"` means the plan's monthly transaction quota (not the request rate). "
+  s.description = "Official GriffNode SDK. Non-custodial crypto payment gateway: accept BTC, ETH, LTC, DOGE, DASH and ERC-20 tokens straight to your own wallet."
   s.license     = "Unlicense"
   s.required_ruby_version = ">= 2.7"
   s.metadata    = {}

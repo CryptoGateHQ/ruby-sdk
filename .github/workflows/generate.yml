@@ -17,7 +17,7 @@ jobs:
             openapitools/openapi-generator-cli:v7.10.0 \
             generate -i /local/openapi.yaml -g ruby -o /local \
             --skip-validate-spec \
-            --additional-properties=gemName=griffnode,moduleName=GriffNode,gemVersion=0.1.0
+            --additional-properties=gemName=griffnode,moduleName=GriffNode,gemVersion=1.0.0,gemHomepage=https://griffnode.com,gemAuthor=GriffNode,gemAuthorEmail=dev@griffnode.com,gemSummary=GriffNode crypto payment gateway API client,gemDescription=Official GriffNode SDK. Non-custodial crypto payment gateway: accept BTC, ETH, LTC, DOGE, DASH and ERC-20 tokens straight to your own wallet.,gemLicense=Apache-2.0
       - name: Commit regenerated SDK
         run: |
           git config user.name  "github-actions[bot]"
