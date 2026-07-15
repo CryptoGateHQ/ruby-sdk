@@ -26,7 +26,11 @@ Gem::Specification.new do |s|
   s.description = "Official GriffNode SDK. Non-custodial crypto payment gateway: accept BTC, ETH, LTC, DOGE, DASH and ERC-20 tokens straight to your own wallet."
   s.license     = "Unlicense"
   s.required_ruby_version = ">= 2.7"
-  s.metadata    = {}
+  s.metadata    = {
+    "homepage_uri"      => "https://griffnode.com",
+    "source_code_uri"   => "https://github.com/GriffNode/ruby-sdk",
+    "documentation_uri" => "https://docs.griffnode.com/reference",
+  }
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
 
